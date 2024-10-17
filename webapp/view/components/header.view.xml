@@ -1,0 +1,18 @@
+<mvc:XMLView xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:tnt="sap.tnt" xmlns:layout="sap.ui.layout">
+    <layout:Grid defaultSpan="XL4 L4 M6 S12">
+        <layout:Grid vSpacing="1" hSpacing="0" defaultSpan="XL6 L6 M12 S12">
+            <Text text="FORM NO:"></Text>
+            <tnt:InfoLabel text="{dm>/form_no}" colorScheme="2"></tnt:InfoLabel>
+            <Text text="STATUS:"></Text>
+            <tnt:InfoLabel text="{dm>/status}" colorScheme="7"></tnt:InfoLabel>
+        </layout:Grid>
+        <FlexBox direction="Column">
+            <Text text="Note:"></Text>
+            <Text text="{dm>/note}"></Text>
+
+            <layoutData>
+                <layout:GridData span="XL8 L8 M12 S12"></layout:GridData>
+            </layoutData>
+        </FlexBox>
+    </layout:Grid>
+</mvc:XMLView>

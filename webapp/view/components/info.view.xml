@@ -1,0 +1,84 @@
+<mvc:XMLView xmlns:core="sap.ui.core" xmlns:cssgrid="sap.ui.layout.cssgrid" xmlns:form="sap.ui.layout.form" xmlns:f="sap.f" xmlns:layout="sap.ui.layout" xmlns:m="sap.m" xmlns:mvc="sap.ui.core.mvc">
+    <layout:Grid hSpacing="0.5" vSpacing="0" containerQuery="true" defaultSpan="XL4 L4 M12 S12">
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Name of project"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Input valueLiveUpdate="true" value="{dm>/info/projectName}"></m:Input>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Bussiness Unit"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:ComboBox width="100%" value="{dm>/info/bussinessUnit}" items="{path: 'dm>/bussinessUnits', sorter: {path: 'name'}}">
+                    <core:Item key="{dm>key}" text="{dm>name}"></core:Item>
+                </m:ComboBox>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Start date"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:DatePicker width="100%" value="{dm>/info/startDate}"></m:DatePicker>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Sales Team"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:ComboBox width="100%" value="{dm>/info/salesTeam}" items="{path: 'dm>/salesTeams', sorter: {path: 'name'}}">
+                    <core:Item key="{dm>key}" text="{dm>name}"></core:Item>
+                </m:ComboBox>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL3 L3 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true" span="XL8 L8 M12 S12"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Project Title"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:layoutData>
+                    <layout:GridData span="XL9 L9 M6 S12"></layout:GridData>
+                </m:layoutData>
+                <m:Input width="100%" value="{dm>/info/projectTitle}"></m:Input>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL3 L3 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true" span="XL8 L8 M12 S12"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Project objective"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:layoutData>
+                    <layout:GridData span="XL9 L9 M6 S12"></layout:GridData>
+                </m:layoutData>
+                <m:TextArea width="100%" value="{dm>/info/projectObjective}"></m:TextArea>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Assigned Person"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:ComboBox value="{dm>/info/assignedPerson}" items="{path: 'dm>/persons', sorter: {path: 'name'}}" width="100%">
+                    <core:Item key="{dm>key}" text="{dm>name}"></core:Item>
+                </m:ComboBox>
+            </m:VBox>
+        </layout:Grid>
+    </layout:Grid>
+</mvc:XMLView>

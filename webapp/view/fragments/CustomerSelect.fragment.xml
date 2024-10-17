@@ -1,0 +1,18 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<SelectDialog
+		title="Customers"
+		confirm="handleSelect"
+		items="{dm>/customers}">
+		<StandardListItem
+			iconDensityAware="false"
+			iconInset="false"
+			title="{dm>first_name} {dm>last_name}"
+        >
+            <customData>
+                <core:CustomData key="id" value="{dm>id}"></core:CustomData>
+            </customData>
+        </StandardListItem>
+	</SelectDialog>
+</core:FragmentDefinition>

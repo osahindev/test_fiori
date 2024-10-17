@@ -1,0 +1,42 @@
+<mvc:View xmlns:tnt="sap.tnt" xmlns:layout="sap.ui.layout" 
+    xmlns:uxap="sap.uxap" 
+    controllerName="maintest.controller.MainView"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <uxap:ObjectPageLayout id="page">
+        <uxap:headerTitle>
+            <uxap:ObjectPageDynamicHeaderTitle>
+                <uxap:actions>
+                    <Button icon="sap-icon://discussion" type="Emphasized"></Button>
+                    <Button icon="sap-icon://edit" type="Emphasized"></Button>
+                    <Button icon="sap-icon://translate" type="Emphasized"></Button>
+                </uxap:actions>
+            </uxap:ObjectPageDynamicHeaderTitle>
+        </uxap:headerTitle>
+
+        <uxap:headerContent>
+                    <mvc:XMLView viewName="maintest.view.components.header"></mvc:XMLView>
+        </uxap:headerContent>
+
+        <uxap:sections>
+            <uxap:ObjectPageSection titleUppercase="false" title="Info">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection titleUppercase="false">
+                        <uxap:blocks>
+                            <mvc:XMLView viewName="maintest.view.components.info"></mvc:XMLView>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+            <uxap:ObjectPageSection titleUppercase="false" title="Commercial">
+                <uxap:subSections>
+                    <uxap:ObjectPageSubSection titleUppercase="false">
+                        <uxap:blocks>
+                            <mvc:XMLView viewName="maintest.view.components.commercial"></mvc:XMLView>
+                        </uxap:blocks>
+                    </uxap:ObjectPageSubSection>
+                </uxap:subSections>
+            </uxap:ObjectPageSection>
+        </uxap:sections>
+    </uxap:ObjectPageLayout>
+</mvc:View>

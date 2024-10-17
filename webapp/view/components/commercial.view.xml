@@ -1,0 +1,186 @@
+<mvc:XMLView xmlns:core="sap.ui.core" xmlns:table="sap.ui.table" xmlns:layout="sap.ui.layout" controllerName="maintest.controller.CommercialView" xmlns:mvc="sap.ui.core.mvc" xmlns:m="sap.m">
+    <layout:VerticalLayout>
+    <layout:Grid hSpacing="0.5" vSpacing="0" containerQuery="true" defaultSpan="XL4 L4 M12 S12">
+        <layout:Grid hSpacing="0" defaultSpan="XL3 L3 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true" span="XL8 L8 M12 S12"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Customer"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:layoutData>
+                    <layout:GridData span="XL9 L9 M6 S12"></layout:GridData>
+                </m:layoutData>
+                <layout:Grid hSpacing="0" vSpacing="0" defaultSpan="XL9 L9 M6 S12">
+                    <m:Input value="{dm>/commercial/customerId}" id="customerValueHelp" valueHelpRequest="handleCustomerSelectHelp" showValueHelp="true" width="90%">
+                        <m:layoutData>
+                            <layout:GridData span="XL3 L3 M4 S6"></layout:GridData>
+                        </m:layoutData>
+                    </m:Input>
+                    <m:Input width="100%"  value="{dm>/commercial/customerFullName}">
+                        <m:layoutData>
+                            <layout:GridData span="XL9 L9 M8 S6"></layout:GridData>
+                        </m:layoutData>
+                    </m:Input>
+                </layout:Grid>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="New Customer ?"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:ComboBox  width="100%" value="{dm>/commercial/isNewCustomer}" items="{path: 'dm>/isNewCustomer', sorter: {path: 'name'}}">
+                    <core:Item key="{dm>key}" text="{dm>name}"></core:Item>
+                </m:ComboBox>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Brand Owner"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Input width="100%" value="{dm>/commercial/brandOwner}"></m:Input>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Distribütör"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:ComboBox width="100%" value="{dm>/commercial/distributor}" items="{path: 'dm>/distributors', sorter: {path: 'name'}}">
+                    <core:Item key="{dm>key}" text="{dm>name}"></core:Item>
+                </m:ComboBox>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Brand names"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Input width="100%" value="{dm>/commercial/brandNames}"></m:Input>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Sales type"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:ComboBox  width="100%" value="{dm>/commercial/salesType}" items="{path: 'dm>/salesTypes', sorter: {path: 'name'}}">
+                    <core:Item key="{dm>key}" text="{dm>name}"></core:Item>
+                </m:ComboBox>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Competitor"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Input width="100%" value="{dm>/commercial/competitor}"></m:Input>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Target price"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Input width="100%" type="Number" value="{dm>/commercial/targetPrice}"></m:Input>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Target CM"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Input width="100%" type="Number" value="{dm>/commercial/targetCM}"></m:Input>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Typical order size"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Input width="100%" type="Number" value="{dm>/commercial/typicalOrderSize}"></m:Input>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Order Units"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:ComboBox  width="100%" value="{dm>/commercial/orderSize}" items="{path: 'dm>/orderSizes', sorter: {path: 'name'}}">
+                    <core:Item key="{dm>key}" text="{dm>name}"></core:Item>
+                </m:ComboBox>
+            </m:VBox>
+        </layout:Grid>
+        <layout:Grid hSpacing="0" defaultSpan="XL6 L6 M6 S12">
+            <layout:layoutData>
+                <layout:GridData linebreak="true"></layout:GridData>
+            </layout:layoutData>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Text text="Investment requirements"></m:Text>
+            </m:VBox>
+            <m:VBox height="40px" justifyContent="Center">
+                <m:Input width="100%" value="{dm>/commercial/inputRequirements}"></m:Input>
+            </m:VBox>
+        </layout:Grid>
+    </layout:Grid>
+    <m:Table popinLayout="GridLarge" 
+		items="{
+			path: 'dm>/table',
+			sorter: {
+				path: 'id'
+			}
+		}">
+        <m:columns>
+            <m:Column>
+                <m:Text text="Sales potential forecast"></m:Text>
+            </m:Column>
+            <m:Column demandPopin="true" minScreenWidth="Desktop">
+                <m:Text text="Sales"></m:Text>
+            </m:Column>
+            <m:Column demandPopin="true" minScreenWidth="Desktop">
+                <m:Text text="Volume (T)"></m:Text>
+            </m:Column>
+            <m:Column demandPopin="true" minScreenWidth="Desktop">
+                <m:Text text="Volume (kSQM)"></m:Text>
+            </m:Column>
+            <m:Column demandPopin="true" minScreenWidth="Desktop">
+                <m:Text text="Volume (pieces)"></m:Text>
+            </m:Column>
+            <m:Column demandPopin="true" minScreenWidth="Desktop">
+                <m:Text text="Cost out"></m:Text>
+            </m:Column>
+        </m:columns>
+        <m:items>
+            <m:ColumnListItem>
+                <m:Input type="Number" value="{dm>salesPotentialForecast}"></m:Input>
+                <m:Input type="Number" value="{dm>salesMeur}"></m:Input>
+                <m:Input type="Number" value="{dm>volumeT}"></m:Input>
+                <m:Input type="Number" value="{dm>volumeKSQM}"></m:Input>
+                <m:Input type="Number" value="{dm>volumePieces}"></m:Input>
+                <m:Input type="Number" value="{dm>costOustMeur}"></m:Input>
+            </m:ColumnListItem>
+        </m:items>
+    </m:Table>
+    </layout:VerticalLayout>
+</mvc:XMLView>
